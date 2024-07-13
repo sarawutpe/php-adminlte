@@ -52,13 +52,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'home';
 
 // Api
-// $route['api'] = 'API/index'; // Maps http://example.com/api to API controller's index method
-// $route['api/callbackLine']['get'] = 'API/callbackLine'; // GET request to callbackLine method
-// $route['api/profile']['get'] = 'API/profile'; // GET request to profile method
-// $route['api/lineNotify']['get'] = 'API/lineNotify'; // GET request to lineNotify method
-// $route['api/callbackLineNotify']['get'] = 'API/callbackLineNotify'; // GET request to callbackLineNotify method
-// $route['api/notify']['post'] = 'API/notify'; // POST request to notify method
-// $route['api/revoke']['post'] = 'API/revoke'; // POST request to revoke method
-// $route['api/status']['get'] = 'API/status'; // GET request to status method
+// $route['api'] = 'api/index'; // maps http://example.com/api to api controller's index method
+// $route['api/callbackline']['get'] = 'api/callbackline'; // get request to callbackline method
+// $route['api/profile']['get'] = 'api/profile'; // get request to profile method
+// $route['api/linenotify']['get'] = 'api/linenotify'; // get request to linenotify method
+// $route['api/callbacklinenotify']['get'] = 'api/callbacklinenotify'; // get request to callbacklinenotify method
+// $route['api/notify']['post'] = 'api/notify'; // post request to notify method
+// $route['api/revoke']['post'] = 'api/revoke'; // post request to revoke method
+// $route['api/status']['get'] = 'api/status'; // get request to status method
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
