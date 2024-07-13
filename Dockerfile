@@ -8,10 +8,10 @@ WORKDIR /var/www/html
 COPY . .
 
 # Install Nginx and required PHP extensions
-RUN apt-get update && apt-get install -y \
-    nginx \
-    libpq-dev \
-    && docker-php-ext-install pdo pdo_mysql pdo_pgsql
+RUN apt-get update \
+    && apt-get install -y nginx libpq-dev \
+    && docker-php-ext-install pdo pdo_mysql \
+    && rm -rf /var/lib/apt/lists/*
 
 # Copy Nginx configuration
 COPY nginx.conf /etc/nginx/nginx.conf
