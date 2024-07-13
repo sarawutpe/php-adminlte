@@ -8,7 +8,7 @@ WORKDIR /var/www/html
 COPY . .
 
 # Enable mod_rewrite for Apache (if needed)
-RUN a2enmod rewrite
+# RUN a2enmod rewrite
 
 # Install PHP extensions
 RUN apt-get update && \
