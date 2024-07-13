@@ -27,7 +27,7 @@ RUN if [ -f composer.json ]; then \
 RUN chown -R www-data:www-data /var/www/html
 
 # Enable Apache mod_rewrite for clean URLs
-RUN a2enmod rewrite
+# RUN a2enmod rewrite
 
 # Expose port 80
 EXPOSE 80
