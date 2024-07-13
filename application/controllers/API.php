@@ -3,7 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 use GuzzleHttp\Client;
 
-class API extends CI_Controller
+class api extends CI_Controller
 {
     private $client;
 
@@ -15,13 +15,21 @@ class API extends CI_Controller
         $this->client = new Client();
     }
 
-    public function index()
+    public function test()
     {
         // Example endpoint to check if API is running
         $this->output
             ->set_content_type('application/json')
             ->set_status_header(200)
-            ->set_output(json_encode(['status' => 'success', 'message' => 'ok']));
+            ->set_output(json_encode(['status' => 'success', 'message' => 'test']));
+    }
+
+    public function index()
+    {
+        $this->output
+            ->set_content_type('application/json')
+            ->set_status_header(200)
+            ->set_output(json_encode(['status' => 'success', 'message' => 'index']));
     }
 
     public function callbackLine()

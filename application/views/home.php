@@ -89,7 +89,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         </form>
                         <div class="social-auth-links text-center mb-3">
                             <p>- OR -</p>
-                            <a href="login" class="btn btn-block btn-success" id="lineLoginBtn">
+                            <a href="oauth/signin" class="btn btn-block btn-success" id="lineLoginBtn">
                                 <i class="fab fa-line mr-2"></i> Sign in using LINE
                             </a>
                         </div>
