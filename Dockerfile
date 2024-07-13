@@ -14,10 +14,12 @@ WORKDIR /var/www/html
 # Copy application files to the default web directory
 COPY . /var/www/html/
 
+# Install Composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
 # Install dependencies if composer.json exists (best practice)
 COPY composer.json ./  
 RUN if [ -f composer.json ]; then \
-        curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
         composer install --no-dev --optimize-autoloader; \
     fi
 # (Optional) If you want to generate composer.lock and ensure consistent builds, uncomment the following line:
