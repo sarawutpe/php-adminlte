@@ -52,8 +52,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'home';
 
 // Api
-$route['api/api/']['get'] = 'api/api';
-// $route['api/api/callbackLine']['get'] = 'api/api/callbackLine';
+$route['api'] = 'API/index'; // Maps http://example.com/api to API controller's index method
+$route['api/callbackLine']['get'] = 'API/callbackLine'; // GET request to callbackLine method
+$route['api/profile']['get'] = 'API/profile'; // GET request to profile method
+$route['api/lineNotify']['get'] = 'API/lineNotify'; // GET request to lineNotify method
+$route['api/callbackLineNotify']['get'] = 'API/callbackLineNotify'; // GET request to callbackLineNotify method
+$route['api/notify']['post'] = 'API/notify'; // POST request to notify method
+$route['api/revoke']['post'] = 'API/revoke'; // POST request to revoke method
+$route['api/status']['get'] = 'API/status'; // GET request to status method
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
